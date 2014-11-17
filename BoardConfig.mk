@@ -139,6 +139,7 @@ BOARD_SEPOLICY_DIRS += \
 
 BOARD_SEPOLICY_UNION += \
 	file_contexts \
+	genfs_contexts \
 	device.te \
 	domain.te \
 	drmserver.te \
@@ -146,7 +147,8 @@ BOARD_SEPOLICY_UNION += \
 	gpsd.te \
 	file.te \
 	mediaserver.te \
-	system_server.te
+	system_server.te \
+	vold.te
 
 MALLOC_IMPL := dlmalloc
 
