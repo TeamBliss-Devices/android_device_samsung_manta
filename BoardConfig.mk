@@ -36,6 +36,7 @@ TARGET_CPU_VARIANT := cortex-a15
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Define kernel config for inline building
+#TARGET_PREBUILT_KERNEL := device/samsung/manta/kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_manta_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/manta
 
@@ -87,8 +88,12 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.manta libdumpstate.manta
 
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 
-TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_manta
 TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/manta
+
+#TARGET_RECOVERY_UI_LIB := librecovery_ui_manta
+TARGET_RECOVERY_UPDATER_LIBS += librecovery_updater_manta
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
+DEVICE_RESOLUTION := 2560x1600
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_RECOVERY_SWIPE := true
 
