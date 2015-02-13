@@ -1,8 +1,8 @@
 [
     {
-      "remote": "cm",
-      "repository": "android_kernel_samsung_manta",
+      "remote": "github",
+      "repository": "Khaon/android_kernel_samsung_manta",
       "target_path": "kernel/samsung/manta",
-      "revision": "cm-12.0”
+      "revision": "khaon-new”
     }
 ]
