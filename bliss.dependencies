@@ -1,8 +1,12 @@
 [
     {
-      "remote": "github",
       "repository": "Khaon/android_kernel_samsung_manta",
       "target_path": "kernel/samsung/manta",
-      "revision": "khaon-new”
+      "revision": "khaon-new"
+    },
+    {
+      "repository": "TeamBliss-Devices/android_device_samsung_smdk4412-common",
+      "target_path": "device/samsung/smdk4412-common",
+      "revision": "lp5.1"
     }
 ]
