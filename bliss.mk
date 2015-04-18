@@ -1,6 +1,7 @@
 # Resolution values for bootanimation
 TARGET_SCREEN_HEIGHT := 1600
 TARGET_SCREEN_WIDTH := 2560
+TARGET_BOOTANIMATION_SIZE := 720x480
 
 # Release name
 PRODUCT_RELEASE_NAME := Nexus10
