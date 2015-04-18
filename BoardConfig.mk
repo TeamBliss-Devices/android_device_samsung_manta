@@ -14,6 +14,23 @@
 # limitations under the License.
 #
 
+#tobitege:
+# KHAON's KERNEL DOES NOT COMPILE WITH 4.8/4.9, BUT 4.7!!!
+BLISS_WIPE_CACHES := 1
+BLISS_BUILD_BLOCK := 0
+TARGET_TC_ROM :=4.8-sm
+TARGET_TC_KERNEL :=4.7-sm
+BLISSIFY :=false
+BLISS_O3 :=false
+BLISS_GRAPHITE :=false
+BLISS_STRICT :=false
+BLISS_KRAIT :=false
+BLISS_PIPE :=false
+
+TARGET_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
+$(combo_2nd_arch_prefix)TARGET_NDK_GCC_VERSION := 4.8
+
 # These two variables are set first, so they can be overridden
 # by BoardConfigVendor.mk
 BOARD_USES_GENERIC_AUDIO := true
@@ -37,8 +54,10 @@ TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
 # Define kernel config for inline building
 #TARGET_PREBUILT_KERNEL := device/samsung/manta/kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_manta_defconfig
+#TARGET_KERNEL_CONFIG := cyanogenmod_manta_defconfig
+TARGET_KERNEL_CONFIG := khaon_manta_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/manta
+BOARD_KERNEL_CMDLINE := console = null androidboot.selinux=permissive
 
 #Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -130,3 +149,6 @@ BOARD_SEPOLICY_UNION += \
 	system_server.te
 
 MALLOC_IMPL := dlmalloc
+
+#Bliss optimizations for About|Phone
+-include vendor/bliss/config/sm.mk
