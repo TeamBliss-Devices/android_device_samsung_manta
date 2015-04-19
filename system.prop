@@ -1,0 +1,10 @@
+#
+# system.prop for manta
+#
+#Wifi Hack
+net.tethering.noprovisioning=true
+# USB
+persist.sys.isUsbOtgEnabled=true
+#Uncomment for MTP access during boot:
+#ro.adb.secure=0
+#persist.sys.usb.config=adb

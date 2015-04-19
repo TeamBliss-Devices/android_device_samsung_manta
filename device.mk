@@ -96,8 +96,8 @@ PRODUCT_PACKAGES := \
 PRODUCT_PACKAGES += libaudience_voicefx
 PRODUCT_COPY_FILES += \
     device/samsung/manta/audio_effects.conf:system/etc/audio_effects.conf \
-    $(LOCAL_PATH)/fmas_eq.dat:system/etc/fmas_eq.dat \
-    $(LOCAL_PATH)/libfmas.so:system/lib/soundfx/libfmas.so
+    device/samsung/fmas_eq.dat:system/etc/fmas_eq.dat \
+    device/samsung/libfmas.so:system/lib/soundfx/libfmas.so
 
 # BCM47511 GPS
 PRODUCT_COPY_FILES += \
@@ -208,7 +208,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # set default USB configuration
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp
+    persist.sys.usb.config=mtp,adb
 
 # Allows healthd to boot directly from charger mode rather than initiating a reboot.
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
