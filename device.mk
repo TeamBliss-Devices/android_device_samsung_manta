@@ -96,8 +96,8 @@ PRODUCT_PACKAGES := \
 PRODUCT_PACKAGES += libaudience_voicefx
 PRODUCT_COPY_FILES += \
     device/samsung/manta/audio_effects.conf:system/etc/audio_effects.conf \
-    device/samsung/fmas_eq.dat:system/etc/fmas_eq.dat \
-    device/samsung/libfmas.so:system/lib/soundfx/libfmas.so
+    device/samsung/manta/fmas_eq.dat:system/etc/fmas_eq.dat \
+    device/samsung/manta/libfmas.so:system/lib/soundfx/libfmas.so
 
 # BCM47511 GPS
 PRODUCT_COPY_FILES += \
