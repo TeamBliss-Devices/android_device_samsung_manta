@@ -6,8 +6,9 @@
       "revision": "khaon-new"
     },
     {
-      "repository": "TeamBliss-Devices/android_device_samsung_smdk4412-common",
-      "target_path": "device/samsung/smdk4412-common",
-      "revision": "lp5.1"
+        "remote": "github",
+        "repository": "arter97-temasek-i9300/android_device_samsung_smdk4412-common",
+        "target_path": "device/samsung/smdk4412-common",
+        "revision": "cm-12.1"
     }
 ]
